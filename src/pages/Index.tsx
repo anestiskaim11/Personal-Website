@@ -86,7 +86,7 @@ const Index = () => {
             </Avatar>
             <div className="inline-block">
               <Badge variant="secondary" className="mb-4 text-sm px-4 py-2 bg-primary/10 text-primary border-primary/20">
-                MS in Artificial Intelligence @ Northeastern University
+                MS in Artificial Intelligence @ Northeastern University, Boston
               </Badge>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
