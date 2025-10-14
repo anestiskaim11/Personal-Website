@@ -151,7 +151,7 @@ const Index = () => {
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 animate-glow" />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">Northeastern University</h3>
+                  <h3 className="text-2xl font-bold mb-2">Northeastern University, Boston</h3>
                   <p className="text-accent font-semibold mb-2">MS in Artificial Intelligence</p>
                   <p className="text-muted-foreground text-sm">September 2025 – Onwards</p>
                   <p className="text-foreground/90 mt-3">Focus: Machine Learning</p>
@@ -163,12 +163,12 @@ const Index = () => {
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-2 h-2 rounded-full bg-secondary mt-2 animate-glow" />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">Aristotle University</h3>
+                  <h3 className="text-2xl font-bold mb-2">Aristotle University (A.U.Th.), Thessaloniki, Greece</h3>
                   <p className="text-accent font-semibold mb-2">BSc & MSc in Electrical and Computer Engineering</p>
                   <p className="text-muted-foreground text-sm">September 2018 – July 2023</p>
                   <div className="mt-3 space-y-1">
-                    <p className="text-foreground/90">Grade: 8.93/10 (6th out of 333 students)</p>
-                    <p className="text-foreground/80 text-sm">Thesis: "3D Roof Model Reconstruction for Digital Twins" (10/10)</p>
+                    <p className="text-foreground/90">Grade: 8.93/10 (top 2% of my class)</p>
+                    <p className="text-foreground/80 text-sm">Thesis: "3D Roof Model Reconstruction for Digital Twins"</p>
                     <p className="text-foreground/80 text-sm">Entrance Exam: 19,060/20,000 (top 0.5% nationwide)</p>
                   </div>
                 </div>
