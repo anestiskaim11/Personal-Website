@@ -62,7 +62,7 @@ const Index = () => {
       name: "Longeyevity",
       role: "AI Research & Product Manager",
       description: "Gamified eye wellness and performance app",
-      period: "02/2025 – Present",
+      period: "02/2025 – 08/2025",
       link: "https://longeyevity.com/",
     },
     {
