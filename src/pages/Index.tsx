@@ -69,7 +69,7 @@ const Index = () => {
       name: "Venus Bookings",
       role: "Product Development Manager",
       description: "Online booking platform for beauty salons",
-      period: "04/2024 – 10/2025",
+      period: "04/2024 – 08/2025",
     },
   ];
 
