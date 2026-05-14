@@ -1,4 +1,4 @@
-import { Mail, ExternalLink, GraduationCap, Briefcase, FileText, FolderKanban, Code } from "lucide-react";
+import { Mail, ExternalLink, GraduationCap, Briefcase, FileText, FolderKanban, Code, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,7 +18,7 @@ const Index = () => {
     },
     {
       title: "Collaborative Knowledge Distillation via a Learning-by-Education Node Community",
-      venue: "Submitted to IEEE Transactions on Artificial Intelligence",
+      venue: "Under final review at IEEE Transactions on Artificial Intelligence",
       link: "https://arxiv.org/abs/2410.00074",
     },
     {
@@ -52,24 +52,68 @@ const Index = () => {
   ];
 
   const skills = {
-    "AI & ML": ["PyTorch", "Keras", "Transformers (ViT, CLIP)", "scikit-learn", "NumPy", "Pandas"],
-    "Programming": ["Python", "Dart", "Java", "C/C++", "Flutter", "Matlab", "Julia", "SQL"],
+    "AI & ML": [
+      "PyTorch",
+      "TensorFlow",
+      "Keras",
+      "scikit-learn",
+      "Hugging Face Transformers",
+      "NumPy",
+      "Pandas",
+      "CUDA",
+      "Computer Vision",
+      "NLP",
+      "Reinforcement Learning",
+      "Generative AI",
+    ],
+    "AI engineering & MLOps": [
+      "RAG pipelines",
+      "LangChain",
+      "Multi-agent systems",
+      "Claude & OpenAI APIs",
+      "FastAPI",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "REST APIs",
+      "Git",
+      "Linux",
+    ],
+    "Programming & data": [
+      "Python",
+      "C++",
+      "C",
+      "Java",
+      "SQL",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Dart",
+      "HTML/CSS",
+    ],
+    "Databases": ["PostgreSQL", "MySQL", "Supabase"],
     "Languages": ["English (fluent)", "French (intermediate)", "Greek (native)"],
   };
 
   const projects = [
     {
-      name: "Longeyevity",
-      role: "AI Research & Product Manager",
-      description: "Gamified eye wellness and performance app",
-      period: "02/2025 – 08/2025",
-      link: "https://longeyevity.com/",
+      name: "Big Fish — AI-powered portfolio intelligence",
+      role: "Full-stack ML & deployment",
+      description:
+        "Ensemble of RL agents trading 17 US equities with tuned reward shaping and exploration; multi-agent LLM layer over RAG on news and filings for macro context and risk governance; Python/FastAPI backend, web frontend, and live paper trading.",
+      link: "https://big-fish-nine.vercel.app/",
     },
     {
-      name: "Venus Bookings",
-      role: "Product Development Manager",
-      description: "Online booking platform for beauty salons",
-      period: "04/2024 – 08/2025",
+      name: "Retinal AI — medical imaging & recommendations",
+      role: "Computer vision & explainable AI",
+      description:
+        "Multiple CV models for disease prediction from retina images, an agent guided by those predictors, explainable heatmaps, online integration, and generative models mapping retina images to advanced modalities for further analysis.",
+    },
+    {
+      name: "AI booking marketplace (Venus Bookings)",
+      role: "Mobile product & AI features",
+      description:
+        "Client app for bookings and professional app with AI-assisted business tools; live for 12 months across 20 venues with 1,000+ bookings; shipped to App Store and Google Play.",
     },
   ];
 
@@ -94,8 +138,36 @@ const Index = () => {
                 Anestis Kaimakamidis
               </span>
             </h1>
+            <div className="space-y-2 text-sm md:text-base max-w-2xl mx-auto">
+              <p className="text-muted-foreground">
+                Connect on{" "}
+                <a
+                  href="https://www.linkedin.com/in/anestis-kaimakamidis-9a347b29b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline inline-flex items-center gap-1.5"
+                >
+                  <Linkedin className="h-4 w-4 shrink-0" aria-hidden />
+                  LinkedIn
+                </a>
+                .
+              </p>
+              <p className="text-muted-foreground">
+                <span className="font-medium text-foreground/80">Scholar:</span>{" "}
+                <a
+                  href="https://scholar.google.com/citations?user=oweAUnMAAAAJ&hl=el"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline inline-flex items-center gap-1.5"
+                >
+                  <ExternalLink className="h-4 w-4 shrink-0" aria-hidden />
+                  Google Scholar
+                </a>
+                <span className="text-muted-foreground"> (15 citations, 7 publications)</span>
+              </p>
+            </div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              AI Researcher specializing in Computer Vision, Continual Learning, and Knowledge Distillation
+              AI researcher and engineer focused on computer vision, NLP, reinforcement learning, and production ML systems
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-3xl mx-auto pt-4">
               <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10" asChild>
@@ -105,7 +177,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10" asChild>
-                <a href="#experience" aria-label="Jump to Research Experience section">
+                <a href="#experience" aria-label="Jump to Experience section">
                   <Briefcase className="mr-2 h-5 w-5" />
                   Experience
                 </a>
@@ -152,9 +224,12 @@ const Index = () => {
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 animate-glow" />
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">Northeastern University, Boston</h3>
-                  <p className="text-accent font-semibold mb-2">MS in Artificial Intelligence</p>
-                  <p className="text-muted-foreground text-sm">September 2025 – Onwards</p>
-                  <p className="text-foreground/90 mt-3">Focus: Machine Learning</p>
+                  <p className="text-accent font-semibold mb-2">MS in Artificial Intelligence — Khoury College of Computer Sciences</p>
+                  <p className="text-muted-foreground text-sm">September 2025 – Present · Expected graduation 2027</p>
+                  <p className="text-foreground/90 mt-3">GPA: 3.92/4.0</p>
+                  <p className="text-foreground/80 text-sm mt-2">
+                    Coursework includes Foundation of Artificial Intelligence, Machine Learning and Pattern Recognition, Algorithms, and Programming and Data Processing for AI.
+                  </p>
                 </div>
               </div>
             </Card>
@@ -164,12 +239,13 @@ const Index = () => {
                 <div className="w-2 h-2 rounded-full bg-secondary mt-2 animate-glow" />
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2">Aristotle University (A.U.Th.), Thessaloniki, Greece</h3>
-                  <p className="text-accent font-semibold mb-2">BSc & MSc in Electrical and Computer Engineering</p>
-                  <p className="text-muted-foreground text-sm">September 2018 – July 2023</p>
+                  <p className="text-accent font-semibold mb-2">Integrated Master&apos;s in Electrical and Computer Engineering</p>
+                  <p className="text-muted-foreground text-sm">Graduated 2023</p>
                   <div className="mt-3 space-y-1">
-                    <p className="text-foreground/90">Grade: 8.93/10 (top 2% of my class)</p>
-                    <p className="text-foreground/80 text-sm">Thesis: "3D Roof Model Reconstruction for Digital Twins"</p>
-                    <p className="text-foreground/80 text-sm">Entrance Exam: 19,060/20,000 (top 0.5% nationwide)</p>
+                    <p className="text-foreground/90">GPA: 8.93/10.0</p>
+                    <p className="text-foreground/80 text-sm">
+                      Coursework includes Pattern Recognition, Data Structures, Databases, and Deep Learning.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -182,32 +258,24 @@ const Index = () => {
       <section id="experience" className="py-24 px-6 bg-card/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold mb-12 text-center">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">Research Experience</span>
+            <span className="bg-gradient-primary bg-clip-text text-transparent">Experience</span>
           </h2>
           <div className="space-y-8">
             <Card className="p-8 bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="w-1 h-full bg-primary rounded-full min-h-[100px]" />
+                <div className="w-1 h-full bg-secondary rounded-full min-h-[100px]" />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">Lab & Research Assistant</h3>
-                  <p className="text-accent font-semibold mb-2">Artificial Intelligence and Information Analysis Lab, A.U.Th.</p>
-                  <p className="text-muted-foreground text-sm mb-4">May 2022 – August 2024</p>
+                  <h3 className="text-2xl font-bold mb-2">Teaching Assistant — Algorithms (CS5800)</h3>
+                  <p className="text-accent font-semibold mb-2">Khoury College of Computer Sciences, Northeastern University</p>
+                  <p className="text-muted-foreground text-sm mb-4">January 2026 – April 2026</p>
                   <ul className="space-y-2 text-foreground/90">
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">▸</span>
-                      <span>Conducted research on Continual Learning and Knowledge Distillation in Computer Vision, leading to multiple publications</span>
+                      <span>Supported MSc students during office hours and one-on-one tutoring</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">▸</span>
-                      <span>Developed software for automatic tweet mining and public opinion estimation (Political Barometer)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">▸</span>
-                      <span>Implemented models using transformers and large-scale text embeddings for Computer Vision and sentiment inference</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-accent mt-1">▸</span>
-                      <span>Worked on three research and innovation projects (AI4Media, AI4Europe, TEMA) funded by the European Union</span>
+                      <span>Graded homework and exams with actionable feedback</span>
                     </li>
                   </ul>
                 </div>
@@ -216,23 +284,35 @@ const Index = () => {
 
             <Card className="p-8 bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="w-1 h-full bg-secondary rounded-full min-h-[100px]" />
+                <div className="w-1 h-full bg-primary rounded-full min-h-[100px]" />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">Lab & Research Assistant</h3>
-                  <p className="text-accent font-semibold mb-2">Computer Systems Architecture Lab, A.U.Th.</p>
-                  <p className="text-muted-foreground text-sm mb-4">May 2022 – June 2023</p>
+                  <h3 className="text-2xl font-bold mb-2">Research Assistant</h3>
+                  <p className="text-accent font-semibold mb-2">Artificial Intelligence and Information Analysis (AIIA) Lab, Thessaloniki</p>
+                  <p className="text-muted-foreground text-sm mb-4">May 2022 – August 2024</p>
                   <ul className="space-y-2 text-foreground/90">
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">▸</span>
-                      <span>Researched 3D roof model reconstruction for digital twins using semantic segmentation and 3D point cloud processing</span>
+                      <span>
+                        First author on four peer-reviewed papers and co-author on three, spanning visual transformers, continual learning, knowledge distillation, NLP, sentiment analysis, and time-series forecasting
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">▸</span>
-                      <span>Designed and implemented a deep learning pipeline in PyTorch for roof plane detection and reconstruction</span>
+                      <span>
+                        Contributed to EU Horizon projects (AI4Media, AI4Europe, TEMA) on vision–language modeling, large-scale text embeddings, and sentiment inference
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">▸</span>
-                      <span>Collaborated with Digital Twin Cities Center (Chalmers University, Sweden) on data integration</span>
+                      <span>
+                        Built the Political Barometer NLP system for automated tweet mining, transformer-based sentiment, and daily party-vote estimation — outperforming competing methods and polling firms for Greece&apos;s 2023 national and 2024 European elections
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">▸</span>
+                      <span>
+                        Trained vision–language transformers on multi-GPU infrastructure and developed the LENC cloud framework so lab models could exchange knowledge and learn collaboratively
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -249,7 +329,7 @@ const Index = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent">Publications</span>
           </h2>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Research contributions in Computer Vision, Continual Learning, and Knowledge Distillation published in top-tier conferences and journals
+            Peer-reviewed work in computer vision, continual learning, knowledge distillation, NLP, and applied machine learning at conferences and journals
           </p>
           <div className="grid gap-6">
             {publications.map((pub, index) => (
@@ -298,7 +378,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-12 text-center">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Projects</span>
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card
                 key={index}
@@ -309,7 +389,6 @@ const Index = () => {
                     <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">{project.name}</h3>
                     <p className="text-accent font-semibold">{project.role}</p>
                     <p className="text-foreground/90">{project.description}</p>
-                    <p className="text-muted-foreground text-sm">{project.period}</p>
                   </div>
                   {project.link && (
                     <Button variant="ghost" size="icon" className="hover:bg-primary/10 hover:text-primary" asChild>
@@ -331,7 +410,7 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-12 text-center">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Skills & Expertise</span>
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, items]) => (
               <Card key={category} className="p-6 bg-gradient-card border-border/50">
                 <h3 className="text-xl font-bold mb-4 text-accent">{category}</h3>
@@ -354,26 +433,27 @@ const Index = () => {
           <h2 className="text-4xl font-bold mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">Let's Connect</span>
           </h2>
-          <p className="text-muted-foreground mb-8 text-lg">
+          <p className="text-muted-foreground mb-4 text-lg">
             Interested in collaboration or want to discuss AI research? Feel free to reach out.
           </p>
+          <p className="text-muted-foreground text-sm mb-8">Available for opportunities: August – December 2026</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-glow" asChild>
+              <a href="mailto:kaimakamidis.a@northeastern.edu">
+                <Mail className="mr-2 h-5 w-5" />
+                kaimakamidis.a@northeastern.edu
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10" asChild>
               <a href="mailto:akaimakamidis@gmail.com">
                 <Mail className="mr-2 h-5 w-5" />
                 akaimakamidis@gmail.com
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10" asChild>
-              <a href="mailto:kaimakamidis.a@northeastern.edu">
-                <Mail className="mr-2 h-5 w-5" />
-                University Email
-              </a>
-            </Button>
           </div>
           <div className="mt-12 pt-8 border-t border-border/30">
             <p className="text-muted-foreground text-sm">
-              Based in Brookline, MA, U.S.A. • Currently pursuing MS in AI at Northeastern University
+              Boston, MA · MS in Artificial Intelligence, Northeastern University
             </p>
           </div>
         </div>
